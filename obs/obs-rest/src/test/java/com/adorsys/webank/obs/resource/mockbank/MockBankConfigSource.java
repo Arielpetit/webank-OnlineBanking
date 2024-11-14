@@ -22,6 +22,7 @@ public class MockBankConfigSource implements ASPSPConfigSource {
         try {
             return mapper.readValue(inputStream,ASPSPConfigData.class);
         } catch (java.io.IOException e) {
+
             throw new IllegalStateException(e);
         }
     }
